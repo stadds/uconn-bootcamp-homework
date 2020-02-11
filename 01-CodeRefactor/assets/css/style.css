@@ -34,7 +34,8 @@ p {
 .header h1 .seo {
     color: #d9dcd6;
 }
-.skipnav{
+
+.header .skipnav{
     position:absolute;
     top: -40px;
     left: 0px;
@@ -44,7 +45,7 @@ p {
     color: #fff;
     transition: top 1s ease-out;
     border: 1px solid #fff;
-    border-radius: 0;
+    border-radius: 0 !important;
     border-bottom-right-radius: 5px;
     z-index: 100;
 }
@@ -67,7 +68,7 @@ p {
     padding: 10px;
 }
 
-.menu ul li a:hover a:active{
+.menu ul li a:hover{
     background-color: #fff;
     color: #2a607c;
 }   
@@ -131,7 +132,7 @@ p {
     color: #ffffff;
 }
 
-.benefit h3{
+.benefit h2{
     margin-bottom: 10px;
     text-align: center;
 }
@@ -141,8 +142,6 @@ p {
     margin: 10px auto;
     max-width: 150px;
 }
-
-
 
 .footer {
     padding: 30px;
