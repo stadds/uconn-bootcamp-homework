@@ -38,75 +38,67 @@ function generatePassword() {
 //Get password length
 function getPasswordLength() {
     var minPassLength;
-    var maxPassLength;
+   // var maxPassLength;
     var valid = false;
 
     //get min
     while (!valid) {
-        minPassLength = parseInt(prompt("Enter a minimum lengthc(min 8):"), 10);
+        minPassLength = parseInt(prompt("Enter password length (min 8,max 128):"), 10);
         console.log(minPassLength);
 
         if (Number.isNaN(minPassLength)) {
+            alert("Invalid Response");
             valid = false;
         }
-        else if (minPassLength < 8) {
-            console.log(minPassLength + "less than 8");
+        else if (minPassLength < 8 || minPassLength > 128) {
+            alert(minPassLength + "  is an invalid number");
+            console.log(minPassLength + "  is an invalid number");
             valid = false;
         }
-        else if (minPassLength >= 8) {
+        else if (minPassLength >= 8 || minPassLength <= 128) {
             valid = true;
         }
     }
+    // }
 
-    //get max
-    valid = false;//reset valid
-    while (!valid) {
-        maxPassLength = parseInt(prompt("Enter a maxmimum length (max 128):"), 10);
-        console.log(maxPassLength);
+    console.log(minPassLength + " = new password length");
 
-        if (Number.isNaN(maxPassLength)) {
-            valid = false;
-        }
-        if (maxPassLength < minPassLength) {
-            alert("Invalid response");
-            console.log(maxPassLength + " less than min");
-            valid = false;
-        }
-        else if (maxPassLength > 128) {
-            console.log(maxPassLength + " greater than 128");
-            valid = false;;
-        }
-        else if ((maxPassLength > minPassLength) && (maxPassLength <= 128)) {
-            console.log(maxPassLength + " is good");
-            valid = true;
-        }
-    }
-
-    //Get random number between min and max len
-    var passLength = Math.floor(Math.random() * (maxPassLength - minPassLength + 1) + minPassLength);
-    console.log(passLength + " = new password length");
-
-    return passLength;
+    return minPassLength;
 }
 
 
 
 function getInput(crit) {
     var getInput;
+    var valid = false;
 
-    while (getInput !== null) {
+    while (!valid) {
 
         getInput = prompt("Include " + crit + " characters?\n Enter y for yes, n for no:");
-        getInput.toLowerCase();
-        console.log(crit + ": " + getInput);
-
-        if (getInput === "y") {
-            return true;
+        if (getInput == null){
+            alert("Invalid Response");
+            valid = false;
         }
-
-        else if (getInput === "n") {
-            return false;
+        else{
+            getInput.toLowerCase();
+            console.log(crit + ": " + getInput);
+    
+            if (getInput === "y") {
+                valid = true;
+                return true;
+            }
+    
+            else if (getInput === "n") {
+                valid = true;
+                return false;
+            }
+    
+            else{
+                alert("Invalid Response");
+                valid =  false;
+            }
         }
+       
     }
 }
 
@@ -135,6 +127,10 @@ function getCriteria() {
         if (getInput("special")) {
             criteriaArr.push("specialArr");
             meetCrtieria = true;
+        }
+
+        if(!meetCriteria){
+        alert("Must Choose on character criteria");
         }
 
     }//end while
@@ -201,6 +197,7 @@ function getNonRandomString(passLen, theCritArr) {
 }
 
 function shufflePassword(oldPass){
+    console.log("shuffling string to randomize password");
     var holdPass = oldPass.split("");
     var holdLen = holdPass.length;
 
