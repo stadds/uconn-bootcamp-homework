@@ -44,5 +44,9 @@ You are required to submit the following for review:
 
 * The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
+# Submitted
+modal folder - contains solution that gathers criteria through a modal
+prompts folder - contais solution that gathers criteria through a series of prompts
+
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
