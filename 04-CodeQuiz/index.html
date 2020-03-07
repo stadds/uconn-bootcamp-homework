@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+
+    <title>Code Quiz</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="timer-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-2 pt-1">
+                    <a class="text-muted" href="#" id="viewScores">View High Scores</a>
+                </div>
+                <div class="col-8 text-center">
+                    <h1 class="text-dark">Code Quiz!</h1>
+                </div>
+                <div class="col-1 justify-content-end align-items-right lead m-1" id="time-text">
+                    Time:
+                </div>
+                <div class="col-1 justify-content-end align-items-center lead " id="time-left" value="120">
+                    120
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main role="main">
+        <section id="main-directions">
+            <div class="container">
+                <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+                    <div class="col-md-12 px-0">
+                        <h2 class="my-3 text-center" id="header-directions">
+                            Coding Quiz Challenge
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section for directions -->
+            <div class="container mb-3">
+                <div class="row">
+                    <div class="col mb-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Directions:</h3>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text lead">Try to answer the following code-related questions within the
+                                    time
+                                    limit. Keep in mind that incorrect answers will penalize your score & time by 10
+                                    seconds!
+                                </p>
+                            </div>
+                            <div class="card-footer text-right">
+                                <button type="button" class="btn btn-lg btn-primary" id="startQuiz">Start!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--row-->
+            </div>
+            <!--container-->
+        </section>
+
+        <!-- Section for the Quiz Questions -->
+        <section class="container d-none" id="main-quiz">
+            <fieldset>
+                <legend class="jumbotron p-4 p-md-5 text-white rounded bg-dark h2" id="head-question">
+                    Question
+                </legend>
+
+                <!--Radio button cards -->
+                <label>
+                    <input type="radio" name="choices" class="card-input-element d-none" id="rad-btn-a" value="a">
+                    <div class="card card-body shadow-sm lead d-flex flex-row justify-content-between align-items-center"
+                        id="card-a">
+                        <p class="card-text lead" id="choice-a-text">Choice a</p>
+                    </div>
+                </label>
+
+                <label>
+                    <input type="radio" name="choices" class="card-input-element d-none" id="rad-btn-b" value="b">
+                    <div
+                        class="card card-body shadow-sm lead d-flex flex-row justify-content-between align-items-center">
+                        <p class="card-text lead" id="choice-b-text">Choice b</p>
+                    </div>
+                </label>
+
+                <label>
+                    <input type="radio" name="choices" class="card-input-element d-none" id="rad-btn-c" value="c">
+                    <div
+                        class="card card-body shadow-sm lead d-flex flex-row justify-content-between align-items-center">
+                        <p class="card-text lead" id="choice-c-text">Choice c</p>
+                    </div>
+                </label>
+
+                <label>
+                    <input type="radio" name="choices" class="card-input-element d-none" id="rad-btn-d" value="d">
+                    <div
+                        class="card card-body shadow-sm lead d-flex flex-row justify-content-between align-items-center">
+                        <p class="card-text lead" id="choice-d-text">Choice d</p>
+                    </div>
+                </label>
+            </fieldset>
+        </section>
+        <!--main-quiz-->
+
+        <section class="container d-none" id="main-highscore">
+            <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+                <div class="row">
+                    <div class="col-md-12 px-0 text-center">
+                        <h2 class="my-3">High scores</h2>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-6 px-0 text-center">
+                        <h3 class="lead">All Done!</h3>
+                    </div>
+                    <div class="col-sm-6 px-0 text-center">
+                        <p class="d-inline lead my-1 mr-2">You have a score of:</p>
+                        <p class="d-inline lead my-1 mr-2" id="total-score">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-1 m-2">
+                <p class="h3">Add your initials to the high score list!</p>
+            </div>
+            <form class="row my-3" id="form-init">
+                <label for="enterInits" class="d-inline col-md-2 p-1 m-2 text-center">Enter Initials:</label>
+                <input type="text" class="d-inline col-md-3 p-1 m-2 form-control" id="enter-inits">
+                <button type="button" id="player-form" class="d-inline col-md-2 btn btn-primary p-1 m-2">Submit!</button>
+            </form>              
+            <!--row 1-->
+            <div class="row p-1 m-2 border-top">
+                <h3 class="pb-1 mb-1">All Time High Scores</h3>
+            </div>
+            <div class="row p-1 m-2">
+                <ol class="lead" id="highscore-list"></ol>
+            </div>
+            <!--row 3-->
+        </section>
+        <!--highscore-->
+    </main>
+
+    <footer>
+        <div class="container pt-4 my-md-5 pt-md-4 border-top">
+            <!-- main footer to display for directions, highscore  -->
+            <section id="footer-main">
+                <div class="row">
+                    <div class="col-6 col-md order-md-2 text-center">
+                    </div>
+                    <div class="col-6 col-md order-md-3 text-center">
+                    </div>
+                    <div class="col-12 col-md order-md-4 p-4">
+
+                    </div>
+                    <div class="col-12 col-md order-md-1">
+                    </div>
+                </div>
+            </section>
+
+            <section id="footer-quiz" class="d-none">
+                <div class="row">
+                    <div class="col-6 col-md order-md-2 text-center">
+                        <h5>Correct</h5>
+                        <p id="cnt-correct">0</p>
+                    </div>
+                    <div class="col-6 col-md order-md-3 text-center">
+                        <h5>Wrong</h5>
+                        <p id="cnt-wrong">0</p>
+                    </div>
+                    <div class="col-12 col-md order-md-4 p-4">
+
+                    </div>
+                    <div class="col-12 col-md order-md-1">
+                        <a href="index.html" class="text-danger">Go Home</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+
+label {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+  
+  .card-input-element+.card {
+     -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 1.25em;
+    line-height: 1.5em;
+  }
+  
+  .card-input-element+.card:hover {
+    cursor: pointer;
+  }
+  
+  .card-input-element:checked+.card {
+    -webkit-transition: border .3s;
+    -o-transition: border .3s;
+    transition: border .3s;
+    -webkit-animation-name: fadeOutCheckbox;
+    animation-name: fadeOutCheckbox;
+  }
+  
+  .card-input-element:checked+.card::after {
+    content: '\e90d';
+    font-family: 'Material Icons';
+    font-size: 24px;
+  }
+
+  
+  .correct-answer+.card{
+    border: 2px solid green;
+  }
+
+  .correct-answer:checked+.card::after{
+    color:green;
+  }
+
+.wrong-answer+.card{
+  border: 2px solid red;
+}
+
+.wrong-answer:checked+.card::after{
+  color:red;
+}
+
+.final-countdown{
+  color: red;
+}
