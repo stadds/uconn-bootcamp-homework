@@ -6,3 +6,38 @@ body{
 .search{
     background-color: #e9f3f7;
 }
+
+.uv-low{
+    background-color: green;
+    color:black;
+}
+
+.uv-mod{
+    background-color: yellow;
+    color: black;
+}
+
+.uv-high{
+    background-color: orange;
+    color: black;
+}
+
+.uv-veryhigh{
+    background-color: red;
+    color: white;
+}
+
+.uv-extreme{
+    background-color:purple;
+    color: yellow;
+}
+
+.forecast{
+    background-color: blue;
+    color: white;
+}
+
+
+.searchList{
+    background-color: #fff2ff;
+}

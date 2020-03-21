@@ -42,10 +42,10 @@
                 </form>
 
                 <div class="list-group my-3" id="list-searched-cities" role="tablist">
-                    <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="">Home</a>
+                    <!-- <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="">Home</a>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="">Profile</a>
                     <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="">Messages</a>
-                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="">Settings</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="">Settings</a> -->
                 </div>
             </div>
 
@@ -53,18 +53,22 @@
                 <div class="row mb-3">
                     <div class="card" style="width: 100%;">
                         <div class="card-body" id="results-search">
-                          <h2 class="card-title" id="result-city"> CITY </h2>
-                         
+                          <h2 class="card-title" id="result-city">CITY  (date)</h2>
+                          <p class="lead" id="temp-f">Temperature: </p>
+                          <p class="lead" id="result-humid">Humidity: </p>
+                          <p class="lead" id="wind-speed">Wind Speed: </p>
+                          <p class="lead" id="uv-idx">UV Index: <span class="font-weight-bold px-1" id="uv-color"></span></p>                           
                          
                         </div>
                     </div>    
                 </div>
-                <div class="row">
-                    <h2 class="h2">Five Day Forecast</h2>
-                    <div class="card-deck"  id="five-day-forecast">
 
-                    </div>
+                <h2 class="h2" class="my-2">Five Day Forecast</h2>
+                <div class="row">
+                    <div class="card-deck"  id="five-day-forecast">
+                    </div>                    
                 </div>
+               
             </div>
             <!--end col 8-->
         </div>
