@@ -1,43 +1,87 @@
-html,
-body{
-    height:100%;
-}
-
-.search{
+:root {
+    /* font-size: ; */
+    --primary: #5e6472;
+    --secondary: #aed9e0;
+    --third: #b8f2e6;
+    --fourth: #faf3dd;
+    --fifth: #ffa69e;
+    --boxshadow: rgba(0, 0, 0, 0.4);
+    --bodyfont: "Anonymous Pro", monospace;
+    --headerfont: "Eczar", serif;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .search {
     background-color: #e9f3f7;
-}
-
-.uv-low{
+  }
+  
+  .uv-low {
     background-color: green;
-    color:black;
-}
-
-.uv-mod{
+    color: black;
+  }
+  
+  .uv-mod {
     background-color: yellow;
     color: black;
-}
-
-.uv-high{
+  }
+  
+  .uv-high {
     background-color: orange;
     color: black;
-}
-
-.uv-veryhigh{
+  }
+  
+  .uv-veryhigh {
     background-color: red;
     color: white;
-}
-
-.uv-extreme{
-    background-color:purple;
+  }
+  
+  .uv-extreme {
+    background-color: purple;
     color: yellow;
-}
-
-.forecast{
-    background-color: #b5daff;
+  }
+  
+  .forecast {
+    background-color: var(--third);
     color: black;
-}
-
-
-.searchList{
-    background-color: #fff2ff;
-}
+  }
+  
+  .searchList {
+    background-color: var(--fourth);
+  }
+  
+  .bg-prim{
+      background-color: var(--primary);
+      color: white;
+  }
+  
+  
+  .bg-second{
+      background-color: var(--secondary);
+      color: black
+  }
+  
+  .bg-third{
+      background-color: var(--third);
+      color: black;
+  }
+  
+  .bg-fourth{
+      background-color: var(--fourth);
+      color: black;
+  }
+  
+  .bg-fifth{
+      background-color: var(--fifth);
+      color: black;
+  }
+  
+  hr.fifth {
+      border: 6px solid var(--fifth);
+      border-radius: 5px;
+    }

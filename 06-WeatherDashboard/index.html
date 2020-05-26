@@ -17,21 +17,21 @@
 
 <body>
     <header>
-        <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="jumbotron jumbotron-fluid bg-prim shadow text-center">
             <div class="container">
-                <h1 class="display-4">Weather Dashboard</h1>
+                <h1 class="display-4 font-weight-bold">Weather Dashboard</h1>
             </div>
         </div>
     </header>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 search mr-3">
-
+            <div class="col-md-3 mr-3 order-md-1 ml-2 mb-2 bg-second rounded">
                 <form class="align-items-center justify-items-center mb-2">
                     <div class="form-group">
                         <label class="lead font-weight-bold" for="search-place">Search for a City:</label>
                     </div>
+                   
                     <div class="form-row d-flex justify-content-center align-items-center">
                         <div class="col-9">
                             <input type="text" class="form-control" id="search-place">
@@ -40,14 +40,14 @@
                                 class="fas fa-search-location fa-lg"></span></button>
                     </div>
                 </form>
-
+                <hr class="fifth">
                 <div class="list-group my-3" id="list-searched-cities" role="tablist">
                 </div>
             </div>
 
-            <div class="col-sm-8">
+            <div class="col-md-8 order-md-2">
                 <div class="row mb-3">
-                    <div class="card" style="width: 100%;">
+                    <div class="card bg-third rounded mx-2" style="width: 100%;">
                         <div class="card-body" id="results-search">
                           <h2 class="card-title" id="result-city">CITY  (date)</h2>
                           <p class="lead" id="temp-f">Temperature: </p>
@@ -58,11 +58,10 @@
                         </div>
                     </div>    
                 </div>
-
+                <hr class="fifth">
                 <h2 class="h2" class="my-2">Five Day Forecast</h2>
-                <div class="row">
-                    <div class="card-deck"  id="five-day-forecast">
-                    </div>                    
+                <div class="row row-cols-1 row-cols-lg-5"  id="five-day-forecast">
+                                       
                 </div>
                
             </div>

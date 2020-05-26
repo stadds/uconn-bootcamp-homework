@@ -137,6 +137,7 @@ function displayFiveDay(FiveDayData) {
     var fiveDay = [];
     var forecastArr = FiveDayData.list;
 
+
     //iterate over the array in the FiveDay Forecast
     //store the forecast that is at noon
     $.each(forecastArr, function (idx, dayHour) {
@@ -155,9 +156,11 @@ function displayFiveDay(FiveDayData) {
 
         //Five Day
 
+        var $divCol =  $("<div>").addClass("col mb-4");
 
         //Card Data
-        var $divCard = $("<div>").addClass("card forecast card-body px-3");
+        var $divCard = $("<div>").addClass("card h-100 forecast card-body px-3");
+        $divCol.append($divCard);
 
         // Date
         var dateFC = moment(fiveDay[i].dt * 1000);
@@ -181,7 +184,7 @@ function displayFiveDay(FiveDayData) {
         $divCard.append($pHumid);
 
 
-        $("#five-day-forecast").append($divCard);
+        $("#five-day-forecast").append($divCol);
     }
 
 }
