@@ -2,7 +2,7 @@
 // ======================================================================
 
 // constants
-const ICONURL = "http://openweathermap.org/img/w/";
+const ICONURL = "https://openweathermap.org/img/w/";
 const CURRENT = "current";
 const FIVEDAY = "fiveday";
 const UVIDX = "uvidx";
