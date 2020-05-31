@@ -35,7 +35,7 @@ function buildQueryURL(typeData, lat, lon) {
         queryURL = "https://api.openweathermap.org/data/2.5/forecast?"
     }
     else if (typeData === UVIDX) {
-        queryURL = "http://api.openweathermap.org/data/2.5/uvi?";
+        queryURL = "https://api.openweathermap.org/data/2.5/uvi?";
 
     }
     //  var queryURL = "https://api.openweathermap.org/data/2.5/weather?";
